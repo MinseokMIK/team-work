@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchUser = createAsyncThunk("users/fetchUser", async () => {
   return await axios
-    .get(`https://jjangudiary.herokuapp.com/notes`)
+    .get(`{process.env.REACT_APP_NOTE}`)
     .then((res) => res.data)
     .catch((error) => error);
 });
@@ -11,7 +11,7 @@ export const addfetchUser = createAsyncThunk(
   "users/fetchUser",
   async (payload, thunkAPI) => {
     const resdata = await axios
-      .post(`https://jjangudiary.herokuapp.com/notes`, {
+      .post(`{process.env.REACT_APP_NOTE}`, {
         id: payload.id,
         name: payload.name.userName,
         title: payload.title.userTitle,
@@ -29,7 +29,7 @@ export const delfetchUser = createAsyncThunk(
   async (payload, thunkAPI) => {
     const resdata = await axios
 
-      .delete(`https://jjangudiary.herokuapp.com/notes${payload}`)
+      .delete(`{process.env.REACT_APP_NOTE}${payload}`)
       .then((res) => res.data)
       .catch((error) => error);
     return thunkAPI.fulfillWithValue(resdata);
@@ -41,7 +41,7 @@ export const patchfetchUser = createAsyncThunk(
     console.log(payload);
     const resdata = await axios
       // eslint-disable-next-line no-template-curly-in-string
-      .patch(`https://jjangudiary.herokuapp.com/notes/${payload.id}`, {
+      .patch(`{process.env.REACT_APP_NOTE}/${payload.id}`, {
         id: payload.id,
         name: payload.name,
         contents: payload.contents,
