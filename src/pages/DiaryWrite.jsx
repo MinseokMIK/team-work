@@ -75,7 +75,7 @@ function Diary_write() {
         />
   
       </div>
-      <Button label = '추가하기' type="submit" onClick={titlealert} />
+      <Button label =  "일기 추가" type="submit" onClick={titlealert}>Add</Button>
 
       <Button label =  "일기보러가기" type="button" onClick={() => navigate('../diarywriteAll')}/>
         

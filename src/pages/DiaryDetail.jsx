@@ -111,13 +111,15 @@ const DetailBox = styled.div`
 
 const Detail = styled.div`
   width: 600px;
-  height: 200px;
-  background-color: wheat;
-  border: 1px solid #eee;
+  height: 400px;
+  background-color: #a06fec;
+  border: 2px solid #000;
   border-radius: 10px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px
     1px 4px;
+  color:#543d70;
+  font-size:21px;
 `;
 
 export default Diary_writeAll;
