@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
     "uuid": "^8.3.2",
+    "vercel": "^27.4.0",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -35,7 +36,6 @@
       "react-app/jest"
     ]
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -52,6 +52,3 @@
     "redux-devtools-extension": "^2.13.9"
   }
 }
-
-  
-
