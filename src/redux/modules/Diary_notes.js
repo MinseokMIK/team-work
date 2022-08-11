@@ -29,7 +29,7 @@ export const delfetchUser = createAsyncThunk(
   async (payload, thunkAPI) => {
     const resdata = await axios
 
-      .delete(process.env.REACT_APP_NOTE+payload)
+      .delete(`https://jjangudiary.herokuapp.com/notes/${payload}`)
       .then((res) => res.data)
       .catch((error) => error);
     return thunkAPI.fulfillWithValue(resdata);
@@ -41,7 +41,7 @@ export const patchfetchUser = createAsyncThunk(
     console.log(payload);
     const resdata = await axios
       // eslint-disable-next-line no-template-curly-in-string
-      .patch(process.env.REACT_APP_NOTE+payload.id, {
+      .patch(`https://jjangudiary.herokuapp.com/notes/${payload.id}`, {
         id: payload.id,
         name: payload.name,
         contents: payload.contents,
