@@ -29,7 +29,7 @@ export const delfetchUser = createAsyncThunk(
   async (payload, thunkAPI) => {
     const resdata = await axios
 
-      .delete(`https://jjangudiary.herokuapp.com/notes/${payload}`)
+      .delete(`https://jjangudiary.herokuapp.com/notes${payload}`)
       .then((res) => res.data)
       .catch((error) => error);
     return thunkAPI.fulfillWithValue(resdata);
